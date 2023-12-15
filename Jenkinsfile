@@ -3,11 +3,11 @@ pipeline{
     stages{
         stage("Deploy Dev"){
             when {
-                // This works only in multi branch pipeline
                 branch 'development'
             }
             steps{
                 echo "Deploying to Dev environment"
+                echo "Deployment on dev done"
             }
         }
         stage("Deploy Staging"){
@@ -16,6 +16,7 @@ pipeline{
             }
             steps{
                 echo "Deploying to Staging environment"
+                echo "Deployment on staging done"
             }
         }
 
@@ -25,6 +26,7 @@ pipeline{
             }
             steps{
                 echo "Deploying to Prod environment"
+                echo "Deployment on prod done"
             }
         }
     }
